@@ -9,7 +9,7 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
-project ("KeyMapRandomizer")
+project ("DrunKeybord") # I KNOW THATS SPELLS KEYBOARD
 
 # Включите подпроекты.
-add_subdirectory ("KeyMapRandomizer")
+add_subdirectory ("DrunKeybord")
