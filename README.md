@@ -109,22 +109,18 @@ but if u have only 60% keyboard.... well, good luck buddy.
 git clone https://github.com/yourusername/drunk-keyboard.git
 cd drunk-keyboard
 
-# Build with CMake (recommended)
 mkdir build && cd build
 cmake ..
 cmake --build . --config Release
 
-# Run it
 ./drunk-keyboard.exe
 ```
 DONT FORGET TO CHECK IN PATH
 C:\Program Files\CMake\bin
 
-**Thats it. your keyboard is now suffering.**
-
 ———————————————————————————————————————————————————
 
-## setup (if youre actually gonna do this)
+## setup
 
 ### Prerequisites
 
@@ -165,19 +161,6 @@ cl /W4 /EHsc /std:c++20 KeyMapRandomizer.cpp /link user32.lib /OUT:drunk-keyboar
 g++ -std=c++20 -Wall KeyMapRandomizer.cpp -o drunk-keyboard.exe -luser32
 ```
 
-### Run It
-
-```bash
-./drunk-keyboard.exe
-```
-
-### Escape
-
-```
-Alt+F5
-(or Task Manager if you panic)
-```
-
 ———————————————————————————————————————————————————
 
 ## CONFIGURATION
@@ -210,7 +193,7 @@ static const std::vector<int> customKeys = {
 SetWindowsHookEx(WH_KEYBOARD_LL, KeyboardProc, NULL, 0);
 ```
 
-thats literally it. drunKeyboard at the OS level, intercepting every keystroke before your app even *knows* it happened.
+thats literally it, drunKeyboard, intercepting every keystroke before your app even *knows* it happened
 
 ### The Flow
 
@@ -219,8 +202,6 @@ thats literally it. drunKeyboard at the OS level, intercepting every keystroke b
 3. i check the map: "what does THIS key do today?"
 4. i send the wrong one instead
 5. your app thinks you typed chaos
-6. your brain short-circuits
-7. profit
 
 ### Why its Fast
 
